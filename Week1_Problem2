@@ -1,0 +1,10 @@
+counter = 0
+bobcounter = 0
+
+
+for x in s:
+    if s[counter:counter+3]=='bob':
+        bobcounter += 1
+    counter += 1
+        
+print ('Number of times bob occurs is: ', str(bobcounter))

@@ -1,0 +1,15 @@
+monthlyInterestRate = annualInterestRate/12.0
+
+def remainingBalance (balance, monthlyPaymentRate, monthlyInterestRate, months):
+    if months == 0:
+        return balance
+    else:
+        balance = remainingBalance(balance, monthlyPaymentRate, monthlyInterestRate, months-1)
+        monthlyPayment = monthlyPaymentRate * balance
+        monthlyUnpaidBalance = balance - monthlyPayment
+        balance = monthlyUnpaidBalance + (monthlyInterestRate*monthlyUnpaidBalance)
+        return balance
+
+balanceAfterOneYear = remainingBalance(balance, monthlyPaymentRate, monthlyInterestRate, 12)
+
+print("Remaining balance: " + str(round(balanceAfterOneYear, 2)))

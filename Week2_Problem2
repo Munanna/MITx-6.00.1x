@@ -1,0 +1,19 @@
+monthlyInterestRate = annualInterestRate/12.0
+
+def remainingBalance (balance, monthlyPayment, monthlyInterestRate, months):
+    if months == 0:
+        return balance
+    else:
+        balance = remainingBalance(balance, monthlyPayment, monthlyInterestRate, months-1)
+        monthlyUnpaidBalance = balance - monthlyPayment
+        balance = monthlyUnpaidBalance + (monthlyInterestRate*monthlyUnpaidBalance)
+        return balance
+
+monthlyPayment = 10
+balanceAfterOneYear = remainingBalance(balance, monthlyPayment, monthlyInterestRate, 12)
+while balanceAfterOneYear > 0:
+    monthlyPayment += 10
+    balanceAfterOneYear = remainingBalance(balance, monthlyPayment, monthlyInterestRate, 12)
+    
+
+print("Lowest payment: " + str(monthlyPayment))

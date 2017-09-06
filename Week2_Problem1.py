@@ -1,3 +1,13 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Aug 22 09:31:06 2017
+
+@author: OMNISLO
+"""
+
+balance = 484
+annualInterestRate = 0.2
+monthlyPaymentRate = 0.04
 monthlyInterestRate = annualInterestRate/12.0
 
 def remainingBalance (balance, monthlyPaymentRate, monthlyInterestRate, months):

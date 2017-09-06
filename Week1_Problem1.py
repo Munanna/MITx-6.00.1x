@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Sep  6 11:54:17 2017
+
+@author: OMNISLO
+"""
+
 counter = 0
 
 

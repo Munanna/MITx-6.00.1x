@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Sep 17 12:47:11 2017
+
+@author: OMNISLO
+"""
+
+def getGuessedWord(secretWord, lettersGuessed):
+    '''
+    secretWord: string, the word the user is guessing
+    lettersGuessed: list, what letters have been guessed so far
+    returns: string, comprised of letters and underscores that represents
+      what letters in secretWord have been guessed so far.
+    '''
+    # FILL IN YOUR CODE HERE...
+    guessedWord = ''
+    for letter in secretWord:
+        if letter in lettersGuessed:
+            guessedWord += (letter + ' ')
+        else:
+            guessedWord += ('_ ')
+    return guessedWord
+
+print(getGuessedWord('apple', ['a', 'e', 'i', 'k', 'p', 'r', 's']))
